@@ -5,7 +5,7 @@ let app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.json({ Intro: "Hello Worldd" });
+  res.sendFile(path.join(__dirname + "/index.html"));
 });
 
 app.listen(3000, () => {
